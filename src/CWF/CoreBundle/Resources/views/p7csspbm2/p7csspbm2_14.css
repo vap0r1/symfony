@@ -1,0 +1,253 @@
+/* 
+  ------------------------------------------------
+  PVII CSS Page Builder Magic 2
+  Copyright (c) 2013 Project Seven Development
+  www.projectseven.com
+  14: 3 Col Fixed, Top Menu
+  ------------------------------------------------
+*/
+
+body {
+	font-family: "Segoe UI", Optima, Helvetica, Arial, sans-serif;
+	color: #000;
+	background-color: #FFFFFF;
+	margin: 20px 0;
+	padding: 0px;
+}
+
+/*Rounded Corners*/
+.content-wrapper {border-radius: 8px; }
+.masthead {border-radius: 6px 6px 0px 0px;}
+.footer { border-radius: 0px 0px 6px 6px; }
+
+.masthead {
+	padding: 0px;
+	text-align: left;
+	background-color: #222;
+}
+.masthead .logo {
+	position: relative;
+}
+.masthead h1 {
+	margin: 0;
+	color: #8C8C8C;
+	padding: 20px 20px 10px 20px;
+	font-size: 1.35em;
+	font-weight: normal;
+	letter-spacing: .35em;
+}
+/*Max-Width allows the image to scale with the page*/
+.masthead .banner img {
+	height: auto !important;
+	width: auto !important;
+	max-width: 100%;
+}
+.masthead .banner {
+	position: relative;
+	z-index: 20;
+	box-shadow: 0px 0px 20px #000;
+}
+
+.content-wrapper {
+	border: 1px solid #222;
+	margin: 0 auto;
+	width: 980px;
+	box-shadow: 0 0 20px #999;
+}
+.columns-wrapper {
+	overflow: hidden;
+	background-color: #FFF;
+	position: relative;
+}
+
+.sidebar {
+	width: 22%;
+	float: left;
+	position: relative;
+	left: -56%;
+}
+.main-content {
+	width: 56%;
+	float: left;
+	position: relative;
+	left: 22%;
+}
+.sidebar2 {
+	width: 22%;
+	float: right;
+}
+
+.sidebar .content, .sidebar2 .content {
+	padding: 30px 20px;
+	font-size: 0.85em;
+	line-height: 1.5em;
+	background-color: #AAA;
+	background-image: -ms-linear-gradient(top, #FFF, #AAA);
+	background-image: -moz-linear-gradient(top, #FFF, #AAA);
+	background-image: -webkit-linear-gradient(top, #FFF, #AAA);
+	background-image: linear-gradient(top, #FFF, #AAA);
+}
+.main-content .content {
+	padding: 20px 24px;
+	font-size: 1em;
+	line-height: 1.5em;
+	border-right: 1px solid #000;
+	border-left: 1px solid #000;
+}
+
+/*Heading styles*/
+h1, h2, h3, h4 {
+	margin: 30px 0px 0px 0px;
+}
+h1 { font-size: 1.5em; }
+h2 { font-size: 1.35em; }
+h3 { font-size: 1.25em; }
+h4 { font-size: 1.1em; }
+
+/*A utility rule assigned to the first heading to remove top margins.*/
+.page-topper { margin-top: 0px; }
+
+/*Make Image Scalable - Assign this class to any image to make it scale with the browser window size*/
+img.scalable {
+	height: auto !important;
+	width: auto !important;
+	max-width: 100%;
+}
+
+/*Ordinary Link Styles*/
+.content a { color: #0066CC; }
+.content a:hover, .content a:focus { color: #C30; }
+.sidebar2 a { color: #0059B3; }
+.sidebar2 a:hover, .sidebar2 a:focus { color: #000; }
+.footer a {
+	color: #8C8C8C;
+}
+.footer a:hover, .footer a:focus { color: #FFF; }
+
+.sidebar ul, .sidebar ol, .sidebar2 ul, .sidebar2 ol {
+	margin: 0 0 0 .5em;
+	padding: 0 0 0 .5em;
+	line-height: normal;
+}
+.sidebar li, .sidebar2 li { 
+	margin-bottom: 4px; 
+}
+
+/*The DIV that contains the horizontal menu bar at the top of your page.*/
+.menutop-wrapper {
+	background-color: #6E6D68;
+	border-bottom: 1px solid #FFF;
+	box-shadow: 0px 0px 30px #999;
+	position: relative;
+	z-index: 10;
+	text-align: center;
+	padding: 10px;
+	background-image: url(img/pbm-menu-bg.jpg);
+	overflow: hidden;
+}
+ul.menutop {
+	margin: 0px;
+	padding: 0px;
+	display: inline-block;
+	vertical-align: bottom;
+}
+.menutop li {
+	list-style-type: none;
+	margin-right: 5px;
+	float: left;
+}
+.menutop li:last-child {
+	margin-right: 0px;
+}
+.menutop a {
+	display: block;
+	color: #CCC;
+	text-decoration: none;
+	padding: 12px 12px;
+	font-size: 1em;
+	border: 1px solid;
+	background-color: #333;
+	box-shadow: inset 0px 12px 6px rgba(255,255,255,.15), 0px 0px 10px rgba(0,0,0,.5);
+	border-radius: 5px;
+	border-color: rgba(255,255,255,.5);
+	-webkit-transition: all linear .35s .1s;
+	transition: all linear .35s .1s;
+}
+.menutop a:hover, .menutop a:focus {
+	color: #FFFFFF;
+	background-color: rgba(51,51,51,0.2);
+	outline: 0;
+}
+
+/*Optional Sidebar Menu UL.*/
+ul.menuside {
+	margin: 0;
+	padding: 0;
+}
+ul.menuside li {
+	list-style-type: none;
+	margin-bottom: 5px;
+}
+ul.menuside a {
+	display: block;
+	color: #CCC;
+	text-decoration: none;
+	padding: 12px 12px;
+	font-size: 1.25em;
+	border: 1px solid;
+	background-color: #333;
+	box-shadow: inset 0px 16px 2px rgba(255,255,255,.05), 0px 0px 5px rgba(0,0,0,.5);
+	border-color: #FFF;
+	-webkit-transition: all linear .35s .1s;
+	transition: all linear .35s .1s;
+	border-radius: 5px;
+}
+ul.menuside a:hover, ul.menuside a:focus {
+	color: #FFFFFF;
+	background-color: rgba(51,51,51,0.75);
+	outline: 0;
+}
+
+.footer {
+	background-color: #222;
+	box-shadow: inset 0px 16px 2px rgba(255,255,255,.025);
+	border-top: 1px solid #000;
+	padding: 15px 30px;
+	font-size: .7em;
+	color: #8C8C8C;
+	text-align: center;
+}
+.footer p.copyright {
+	text-transform: uppercase;
+	margin: 0px;
+}
+
+
+/*1 Column for Narrow Browser Windows and Smartphones in both orientations*/
+@media only screen and (min-width: 0px) and (max-width: 699px) {
+body {margin: 0px;}
+ul.menutop {display: block;}
+.menutop li {
+	display: block;
+	float: none;
+	margin-right: 0px;
+	margin-bottom: 5px;
+}
+.content-wrapper, .masthead, .footer  {border-radius: 0px; }
+.content-wrapper {width: auto; margin: 0px;}
+.sidebar, .sidebar2, .main-content {
+	width: auto !important;
+	float: none !important;
+	position: static !important;
+}
+.content {
+	padding: 10px 10px !important;
+	border: none !important;
+	height: auto !important;
+	max-height: 888678px;
+}
+}
+@media only screen and (min-width: 700px) and (max-width: 1000px)  {
+.content-wrapper {width: auto; margin: 0px 10px;}
+.content {padding: 20px !important;}
+}

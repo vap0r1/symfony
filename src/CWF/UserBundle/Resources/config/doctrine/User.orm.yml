@@ -1,0 +1,8 @@
+CWF\UserBundle\Entity\User:
+    type:  entity
+    table: cwf_users_login
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: AUTO
