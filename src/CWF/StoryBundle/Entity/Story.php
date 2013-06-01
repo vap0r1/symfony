@@ -46,12 +46,26 @@ class Story
      *      )
      */
 	protected $subgenres;
-	
-	/**
+   	/**
+     * @ORM\ManyToMany(targetEntity="Code")
+     * @ORM\JoinTable(name="cwf_story_codes",
+     *      joinColumns={@ORM\JoinColumn(name="story_id", referencedColumnName="id")},
+     *      inverseJoinColumns={@ORM\JoinColumn(name="code_id", referencedColumnName="id")}
+     *      )
+     */
+	protected $codes;
+        
+    /**
+     * @ORM\Column(type="text")
+     */
+	protected $content;
+        
+     /**
      * @ORM\Column(type="boolean")
      */
 	protected $approved;
-		
+
+	   
 
     public function __construct()
     {
@@ -224,5 +238,61 @@ class Story
     public function getGenre()
     {
         return $this->genre;
+    }
+
+    /**
+     * Set content
+     *
+     * @param string $content
+     * @return Story
+     */
+    public function setContent($content)
+    {
+        $this->content = $content;
+    
+        return $this;
+    }
+
+    /**
+     * Get content
+     *
+     * @return string 
+     */
+    public function getContent()
+    {
+        return $this->content;
+    }
+
+    /**
+     * Add codes
+     *
+     * @param \CWF\StoryBundle\Entity\Code $codes
+     * @return Story
+     */
+    public function addCode(\CWF\StoryBundle\Entity\Code $codes)
+    {
+        $this->codes[] = $codes;
+    
+        return $this;
+    }
+
+    /**
+     * Remove codes
+     *
+     * @param \CWF\StoryBundle\Entity\Code $codes
+     */
+    public function removeCode(\CWF\StoryBundle\Entity\Code $codes)
+    {
+        $this->codes->removeElement($codes);
+    }
+
+    /**
+     * Get codes
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getCodes()
+    {
+        return $this->codes;
     }
 }
