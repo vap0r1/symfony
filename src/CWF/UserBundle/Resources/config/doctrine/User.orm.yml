@@ -1,0 +1,9 @@
+# src/CWF/UserBundle/Resources/config/doctrine/User.orm.yml
+CWF\UserBundle\Entity\User:
+    type:  entity
+    table: cwf_users_login
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: AUTO
